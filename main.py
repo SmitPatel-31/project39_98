@@ -1,8 +1,6 @@
-import boto
-from boto.s3.key import Key
-import boto.s3.connection
+
 import logging
-import os
+
 from flask import Flask, request
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Dispatcher
 from telegram import Bot, Update
@@ -14,7 +12,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # telegram bot token
-TOKEN = "2028143718:AAFguVCqQ0PB4wvGGzpFgEK0_RqzFu43cTQ"
+TOKEN = "1991798073:AAHQq6Vxr6OcUQAaKwPdct3shZQTeWAGWrY"
 
 app = Flask(__name__)
 
