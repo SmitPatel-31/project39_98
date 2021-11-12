@@ -92,7 +92,7 @@ def weather_reply(update,context):
 
 
         bot.send_message(chat_id=update.message.chat_id, text=f"Country Code:  {country}\n City Name: {reply}\n\n📍 Latitude: {lat} \n📍 Longitude: {lon}\n\n\n🌡️  Temperature : {temperature} Celsius, \n\n🌡️ Max Temperature : {temperature_max} Celsius\n\n🌡️ Min Temperature : {temperature_min} Celsius\n\n💧Humidity : {humidity} %\n\n↕️ Pressure : {pressure} hPa\n\n☁️ Cloudiness : {clouds} % \n\n️ 🪁 Wind Speed {w_speed} m/s at {w_degree} deg \n\n "
-                                                              f"🌅 Sunrise : {sunrise1} \n\n 🌄 Sunset : {sunset1}\n\n" )
+                                                              f"🌅 Sunrise : {sunrise1} \n\n 🌄 Sunset : {sunset1}\n\n\n\n  By\n\n Hitarth Patel [19BEC039] \n Smit Patel [19BEC098]" )
 
 
     else:
@@ -118,7 +118,7 @@ except Exception as e:
 dp = Dispatcher(bot, None)
 dp.add_handler(CommandHandler("start", start))
 dp.add_handler(CommandHandler("help", _help))
-dp.add_handler(MessageHandler(Filters.text, weather_reply()))
+dp.add_handler(MessageHandler(Filters.text,weather_reply))
 dp.add_error_handler(error)
 
 
