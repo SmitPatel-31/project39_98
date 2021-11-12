@@ -89,18 +89,9 @@ def echo_text(update,context):
         sunrise1=datetime.utcfromtimestamp(sunrise).strftime('%Y-%m-%d %H:%M:%S')
         sunset1=datetime.utcfromtimestamp(sunset).strftime('%Y-%m-%d %H:%M:%S')
 
-        # URL2="http://api.openweathermap.org/data/2.5/air_pollution?lat=" + str(lat) + "&lon=" + str(lon) + "&appid=e3175df7e5869596f69b5c848a2e499d"
-        # response2 = requests.get(URL2)
-        # aqi=None
-        # if  response2.status_code == 200:
-        #     data1 = response2.json()
-        #     list = data1['list']
-        #
-        #     main= list[1:]
-        #     aqi=main['aqi']
 
 
-        bot.send_message(chat_id=update.message.chat_id, text=f"Country Code:  {country}\n City Name: {reply}\n\n📍 Latitude: {lat} \n📍 Longnitude: {lon}\n\n\n🌡️  Temprature : {temperature} Celsius, \n\n🌡️ Max Temprature : {temperature_max} Celsius\n\n🌡️ Min Temprature : {temperature_min} Celsius\n\n💧Humidity : {humidity} %\n\n↕️ Pressure : {pressure} hPa\n\n☁️ Cloudiness : {clouds} % \n\n️ 🪁 Wind Speed {w_speed} m/s at {w_degree} deg \n\n "
+        bot.send_message(chat_id=update.message.chat_id, text=f"Country Code:  {country}\n City Name: {reply}\n\n📍 Latitude: {lat} \n📍 Longitude: {lon}\n\n\n🌡️  Temperature : {temperature} Celsius, \n\n🌡️ Max Temperature : {temperature_max} Celsius\n\n🌡️ Min Temperature : {temperature_min} Celsius\n\n💧Humidity : {humidity} %\n\n↕️ Pressure : {pressure} hPa\n\n☁️ Cloudiness : {clouds} % \n\n️ 🪁 Wind Speed {w_speed} m/s at {w_degree} deg \n\n "
                                                               f"🌅 Sunrise : {sunrise1} \n\n 🌄 Sunset : {sunset1}\n\n" )
 
 
@@ -133,3 +124,4 @@ dp.add_error_handler(error)
 
 if __name__ == "__main__":
     app.run(port=8443)
+
