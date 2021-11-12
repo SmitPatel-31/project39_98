@@ -41,7 +41,7 @@ def start(update,context):
 def _help(update,context):
     bot=context.bot
     """callback function for /help handler"""
-    help_txt = "Hey! This is a help text."
+    help_txt = "Hey! \n Enter City Name correctly Eg. Ahmedabad"
     bot.send_message(chat_id=update.message.chat_id, text=help_txt)
 
 
